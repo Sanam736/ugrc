@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Green Recruitment Consultancy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <marquee behavior="" direction=""><h4>This page is under construction and will be back soon. Thank you for your patience and understanding.</h4></marquee>
+    <div class="menu-bar">
+            <ul>
+            <li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="About Us.html" target="_blank"><i class="fa fa-user"></i>About Us</a></li>
+            <li><a href="Jobs.html" target="_blank"><i class="fa fa-bullhorn"></i> Jobs</a>
+
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">JCB Diggers<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Lorry drivers<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Agricultural workers<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Construction workers<i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#">Hospitality<i class="fa fa-angle-right"></i></a></li>
+
+                </ul>
+            </div>
+        </li>
+
+            <li><a href="Services.html" target="_blank"><i class="fa fa-clone"></i>Services</a>
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="#">Recruitment Services<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Industry Focus<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Consultancy Services<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Client Resources<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Candidate Services<i class="fa fa-angle-right"></i></a></li>
+                        <li><a href="#">Workshops and Events<i class="fa fa-angle-right"></i></a></li>
+    
+                    </ul>
+                </div>            
+            </li>
+            <li><a href="Career Counseling.html" target="_blank"><i class="fa fa-plane"></i>Career Counseling</a></li>
+            <li><a href="Contact.html" target="_blank"><i class="fa fa-phone"></i>Contact</a></li>
+        </ul>
+           </div>
+
+           <div class="container">
+
+            <form onsubmit="sendEmail(); reset (); return false;">
+                <h3 style="text-align: center;">Get In Touch</h3>
+                <input type="text" id="name" placeholder="Your Full Name" required>
+                <input type="email" id="email" placeholder="Email id" required>
+                <input type="text" id="phone" placeholder="Phone No.with Country Code" required>
+                <textarea id="message" rows="4" placeholder="How can we Help you?"></textarea>
+                <button type="submit"> Send</button>
+            </form>
+           </div> 
+           
+
+
+    
+    <footer>
+        <p>Copyright &copy; 2023 Universal Green Recruitment Consultancy</p>
+
+    </footer>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+       <script>
+        function sendEmail(){
+            Email.send({         
+            Host : "smtp.gmail.com",
+            Username : "sanam.grg094@gmail.com",
+            Password : "sanam!@#$%^&",
+            To : 'sanam.grg1988@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form Enquiry",
+            Body : "Name: " + document.getElementById("name").value
+                    + "<br> Enail: " + document.getElementById("email").value
+                    + "<br> Phone No :" + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+           
+        }).then(
+        message => alert("Message has been send Successfully")
+        );
+
+        }
+       </script>
+    
+</body>
+</html>
